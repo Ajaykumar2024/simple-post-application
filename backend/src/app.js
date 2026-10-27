@@ -32,7 +32,7 @@ app.post("/create-post",upload.single('image'),async (req,res)=>{
     })
 })
 
-// GET -> see all post 
+// GET -> see all posts
 
 app.get("/posts", async(req,res)=>{
     const posts= await postModel.find()
