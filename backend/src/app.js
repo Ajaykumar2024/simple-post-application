@@ -1,12 +1,15 @@
 const express = require('express');
 const postModel = require('./models/post.model');
 const multer = require('multer')
+const cors = require('cors');  
+
 
 const uploadFile = require("./services/storage.service")
 
 const app= express()
 // Middleware to read JSON data
 app.use(express.json());
+app.use(cors())
 
 const upload =multer({storage:multer.memoryStorage()}) 
 
